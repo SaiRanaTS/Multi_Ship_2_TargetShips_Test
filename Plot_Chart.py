@@ -50,16 +50,16 @@ def Plot(Own_Ship_Xpos,Own_Ship_Ypos,Trg1_Ship_Xpos,Trg2_Ship_Xpos,Trg1_Ship_Ypo
 
     Q=plt.quiver(own_posDx, own_posDy, u, v, color = 'blue', pivot = 'middle')
     plt.quiverkey(Q,0.75,1.02,1, "Own Ship",labelpos="E")
+    plt.text(own_posDx, own_posDy, "Own Ship")
 
 
 
     P=plt.quiver(Tar1_posDx, Tar1_posDy , z1, p1, color = 'red', pivot = 'middle')
-    plt.quiverkey(P,0.75,1.06,1, "Target1 ship",labelpos="E")
+    plt.quiverkey(P,0.75,1.06,1, "Target ship",labelpos="E")
+    plt.text(Tar1_posDx, Tar1_posDy, "Target Ship 1")
 
-
-    R=plt.quiver(Tar2_posDx, Tar2_posDy , z2, p2, color = 'yellow', pivot = 'middle')
-    plt.quiverkey(R,0.75,1.06,1, "Target2 ship",labelpos="E")
-
+    R=plt.quiver(Tar2_posDx, Tar2_posDy , z2, p2, color = 'red', pivot = 'middle')
+    plt.text(Tar2_posDx, Tar2_posDy, "Target Ship 2")
 
     plt.title("Ship Positions")
     plt.show()
